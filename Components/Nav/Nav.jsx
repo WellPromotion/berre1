@@ -62,7 +62,7 @@ export default function Nav(props) {
                                 {/* <img src="/info.svg" alt="" className="__info" /> */}
                             </div>
                             <div className="__stars-info">
-                                <p>Join our long list <br/> of <span>happy customers</span></p>
+                                <p>Pridružite se našoj dugačkoj <br/> listi <span>SRETNIH KLIJENATA</span></p>
                             </div>
                         </div>
 
@@ -87,39 +87,45 @@ export default function Nav(props) {
                 </div>
                 <div className={"nav__bottom " + menuState()}>
                     <ul className="main-menu">
-                        <li className={current === "home" ? "active" : ""}><Link href="/"><a>Home</a></Link></li>
+                        <li className={current === "home" ? "active" : ""}><Link href="/"><a>POČETNA</a></Link></li>
                         <NavCat current={current}/>
 
-                        <li className={current === "style" ? "active menu__cat __alt" : "menu__cat __alt"}>
-                            <a href="#">Styles</a>
+                        {/* <li className={current === "style" ? "active menu__cat __alt" : "menu__cat __alt"}>
+                            <a href="#">Stilovi</a>
                             <div className="menu__cat__wrap">
                             <div className="menu__cat__body">
                                 <div className="__left">
                                     <div className="__sub">
-                                        <h4>Our Styles</h4>
-                                        <Link href="/style/compact-furniture"><a>Living Furniture</a></Link>
-                                        <Link href="/style/middle-eastern-furniture"><a>Middle Eastern Furniture</a></Link>
-                                        <Link href="/style/italian-furniture"><a>Italian Furniture</a></Link>
-                                        <Link href="/style/european-furniture"><a>European Furniture</a></Link>
-                                        <Link href="/style/modern-furniture"><a>Modern Furniture</a></Link>
-                                        <Link href="/style/turkish-furniture"><a>Turkish Furniture</a></Link>
+                                        <h4>Naši stilovi</h4>
+                                        <Link href="/stilovi/compact-furniture"><a>Compact Furniture</a></Link>
+                                        <Link href="/stilovi/middle-eastern-furniture"><a>Middle Eastern Furniture</a></Link>
+                                        <Link href="/stilovi/italian-furniture"><a>Italian Furniture</a></Link>
+                                        <Link href="/stilovi/european-furniture"><a>European Furniture</a></Link>
+                                        <Link href="/stilovi/modern-furniture"><a>Modern Furniture</a></Link>
+                                        <Link href="/stilovi/turkish-furniture"><a>Turkish Furniture</a></Link>
                                     </div>
                                 </div>
                             </div>
                             </div>
                             
-                        </li>
+                        </li> */}
      
-                        <li className={current === "blogs" ? "active" : ""}><Link href="/blogs"><a>Blogs</a></Link></li>
-                        <li className={current === "sales" ? "active" : ""}><Link href="/deals"><a>Deals</a></Link></li>
-                        <li className={current === "kontakt" ? "active" : ""}><Link href="/contact"><a>Contact</a></Link></li>
-                        <li className={current === "account" ? "active menu__icon" : "menu__icon"}><Link href="/account"><a>
+                        <li className={current === "blogs" ? "active" : ""}><Link href="/blogs"><a>Blog</a></Link></li>
+                        <li className={current === "sales" ? "active" : ""}><Link href="/rasprodaja"><a><b>RASPRODAJA</b></a></Link></li>
+                        <li className={current === "kontakt" ? "active" : ""}><Link href="/kontakt"><a>KONTAKT</a></Link></li>
+                        <li className={current === "account" ? "active menu__icon" : "menu__icon"}><Link href="/racun"><a>
                             <div className="__icon">
                                 <img src="/user.svg" alt="" /> 
                             </div>
-                            Account
+                            RAČUN
                         </a></Link></li>
-                        <NavCart current = {current} />
+                        <NavCart current={current} />
+                        <li className='socialIconz'>
+                            <a href="https://www.facebook.com/namjestajberre.ba"><img src="../../facebook.png" alt="facebook-icon" /></a>
+                        </li>
+                        <li className='socialIconz'>
+                            <a href="https://www.instagram.com/namjestajberre.ba/"><img src="../../instagram.png" alt="instagram-icon" /></a>
+                        </li>
                     </ul>
                 </div>
             </nav>

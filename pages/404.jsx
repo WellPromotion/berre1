@@ -6,7 +6,7 @@ import Nav from "../Components/Nav/Nav";
 const Custom404 = () => {
 
     const headData = {
-        title : "404 - Berre Furniture",
+        title : "404 - Berre namještaj",
         meta : ""
     }
 
@@ -16,12 +16,12 @@ const Custom404 = () => {
     <Nav current=""/>
 
     <section className="section __account sec__home">
-        <img src="https://shop.berre.ca/wp-content/uploads/2022/01/berre-watermark-hq.png" alt="" className="home__watermark"/>
+        <img src="https://shop.berre.ba/wp-content/uploads/2022/01/berre-watermark-hq.png" alt="" className="home__watermark"/>
         <div className="container">
             <div className="account__placeholder">
                 <div className="account__wrap">
-                    <h1><span>404</span> - Page not found</h1>
-                    <p>We can't find the page you were looking for, please use the links at the top of the page to return to the site!</p>
+                    <h1><span>404</span> - stranica nije pronađena</h1>
+                    <p>Ne možemo pronaći stranicu koju tražite, molimo koristite linkove na vrhu stranice da se vratite na stranicu!</p>
                 </div>
             </div>
         </div>

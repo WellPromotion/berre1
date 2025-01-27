@@ -21,7 +21,7 @@ export default function NavSearch() {
             <div className="head__search">
                 <div className="nav__search">
                     <div className="nav__search-wrap">
-                    <input onChange={ e => setSearch(e.target.value)} type="text" value={search} className="input search__input" placeholder="Search for a product..." />
+                    <input onChange={ e => setSearch(e.target.value)} type="text" value={search} className="input search__input" placeholder="Potražite proizvod..." />
                         {
                             search === "" ?
                             <img src="/magnifier.svg" alt="" className="search__img" />
@@ -33,7 +33,7 @@ export default function NavSearch() {
                         <div className="search__products">
                         {
                         data.products.nodes.map(res => 
-                            <Link key={res.id} href={`/products/${res.productCategories.nodes[0].slug}/${res.slug}`}><a>
+                            <Link key={res.id} href={`/proizvodi/${res.productCategories.nodes[0].slug}/${res.slug}`}><a>
                                 {/* href={`/produkte/${res.productCategories.nodes.filter(r => null === r.ancestors)[0].slug.slice(1)}/${res.slug}`} */}
                             <div className="product__search" key={res.id} onClick={()=>setSearch("")}>
 
@@ -49,17 +49,17 @@ export default function NavSearch() {
                         )
                         }
                             <Link href={{ pathname: '/search', query: { search: search } }}>
-                                <button className="button search__butt">See all results</button>
+                                <button className="button search__butt">Pogledajte sve rezultate</button>
                             </Link>
                         </div>
                         : 
                         <div className="search__products">
-                            <p className="p__error">No products found</p>
-                            <button className="button search__butt" onClick={()=> setSearch("")}>Clear search</button>
+                            <p className="p__error">Nema pronađenih proizvoda</p>
+                            <button className="button search__butt" onClick={()=> setSearch("")}>Obriši pretragu</button>
                         </div>
                         :
                         <div className="search__products">
-                            <p className="p__error">Loading...</p>
+                            <p className="p__error">Učitavanje...</p>
                         </div>
                         : ""
                     } 

@@ -69,19 +69,13 @@ const authLink = setContext((_, { headers }) => {
 // Apollo GraphQL client.
 const client = new ApolloClient({
 	link:  middleware.concat( authLink.concat ( afterware.concat( createHttpLink({
-		uri: 'https://shop.berre.ca/graphql'
+		uri: 'https://shop.berre.ba/graphql',
+		fetch: fetch
 	}) ) ) ),
 	cache: new InMemoryCache(),
-	defaultOptions: {
-		watchQuery: {
-		  fetchPolicy: 'no-cache',
-		  errorPolicy: 'ignore',
-		},
-		query: {
-		  fetchPolicy: 'no-cache',
-		  errorPolicy: 'all',
-		},
-	  }
+	fetchOptions: {
+		mode: 'cors',
+	},
   
 });
 

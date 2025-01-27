@@ -1,6 +1,5 @@
 const countryList = [
-	{ countryCode: 'CA', countryName: 'Canada' },
-	{ countryCode: 'US', countryName: 'United States of America' }
+	{ countryCode: 'BA', countryName: 'Bosna i Hercegovina' }
 ];
 
 export default countryList;

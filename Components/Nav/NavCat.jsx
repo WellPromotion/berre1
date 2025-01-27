@@ -9,8 +9,8 @@ const NavCat = (props) => {
     return (
         <React.Fragment>
         <li className={current === "cat" ? "active menu__cat" : "menu__cat"}>
-            <Link href="/products"><a className="__main">
-                Products
+            <Link href="/proizvodi"><a className="__main">
+                Proizvodi
             </a></Link>
 
             <div className="menu__cat__wrap">
@@ -21,25 +21,23 @@ const NavCat = (props) => {
                 <div className="menu__cat__body">
                     <div className="__left">
                         <div className="__sub">
-                            <h4>Categories</h4>
-                            <Link href="/products"><a>All products</a></Link>
-                            <Link href="/products/4-seater-sofa"><a>4 Seater Sofas</a></Link>
-                            <Link href="/products/love-seat"><a>Love Seat Sofas</a></Link>
-                            <Link href="/products/armchair"><a>Armchairs</a></Link>
-                            <Link href="/products/sofa-set"><a>Sofa Sets</a></Link>
-                            <Link href="/products/home-decor"><a>Home Décor</a></Link>
+                            <h4> KATEGORIJE</h4>
+                            <Link href="/proizvodi"><a>Svi proizvodi</a></Link>
+                            <Link href="/proizvodi/cetvorosjed"><a>Četvorosjed</a></Link>
+                            <Link href="/proizvodi/dvosjed"><a>Dvosjed</a></Link>
+                            <Link href="/proizvodi/fotelja"><a>Fotelja</a></Link>
+                            <Link href="/proizvodi/garniture"><a>Garniture</a></Link>
                         </div>
                         <div className="__sub">
-                            <Link href="/products/bed-bedding"><a>Bed & Bedding</a></Link>
-                            {/* <Link href="/products/sofa"><a>Sofas</a></Link> */}
-                            <Link href="/products/sofa-bed"><a>Sofa Beds</a></Link>
-                            <Link href="/products/3-seater-sofa"><a>3 Seater Sofas</a></Link>
-                            <Link href="/products/sectional-sofa"><a>Sectional Sofas</a></Link>
-                            <Link href="/products/occasional-tables"><a>Occasional Tables</a></Link>
+                            <Link href="/proizvodi/kreveti"><a>Kreveti</a></Link>
+                            <Link href="/proizvodi/sofe-na-razvlacenje"><a>Sofe na razvlacenje</a></Link>
+                            <Link href="/proizvodi/stolovi-stolice-i-ostalo"><a>Stolovi, stolice i ostalo</a></Link>
+                            <Link href="/proizvodi/trosjed"><a>Trosjed</a></Link>
+                            <Link href="/proizvodi/ugaone-garniture"><a>Ugaone garniture</a></Link>
                         </div>
                     </div>
                     <div className="__right">
-                        <img src="https://shop.berre.ca/wp-content/uploads/2022/05/bianka-1.png" alt="" />
+                        <img src="https://shop.berre.ba/wp-content/uploads/2022/05/bianka-1.png" alt="" />
                     </div>
                 </div>
             </div>

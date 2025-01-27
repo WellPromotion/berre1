@@ -7,7 +7,7 @@ import CartPage from '../Components/Cart/CartPage';
 export default function Cart() {
 
     const headData = {
-        title : "Cart - Berre Furniture",
+        title : "Korpa - Berre namještaj",
         meta : ""
     }
 

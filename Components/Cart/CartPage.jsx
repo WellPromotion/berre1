@@ -108,7 +108,7 @@ const CartPage = () => {
 
                 <div className="column is-8 __first-col">
                     <div className="new-cart__cart">
-                        <h1>Cart - <span>{productsCount} Items </span></h1>
+                        <h1>Cart - <span>{productsCount} Predmeti </span></h1>
                         <div className="divider"></div>
 
                         <div className="cart__item__wrapper">
@@ -137,17 +137,17 @@ const CartPage = () => {
                     {/* SHIPPING */}
 
                     <div className="new-cart__cart">
-                        <h1 className="two__v">Shipping</h1>
+                        <h1 className="two__v">Dostava</h1>
                         {/* <div className="divider"></div> */}
 
-                        <p className="new-cart__shipping">At Berre furniture store, we want our customers always to have an enjoyable experience. Please familiarize yourself with the return and exchange policy before completing your order.</p>
-                        <Link href="/policies"><a><p className="new-cart__shipping"><b>For More Information Please <span>Click Here</span></b></p></a></Link>
+                        <p className="new-cart__shipping">U Berre namještaja želimo da naši kupci uvijek imaju ugodno iskustvo. Molimo da se upoznate sa politikom povrata i zamjene prije nego što završite narudžbu.</p>
+                        <Link href="/uslovi-isporuke"><a><p className="new-cart__shipping"><b>Za više informacija molimo <span>Kliknite ovdje</span></b></p></a></Link>
                     </div>
 
                     {/* PAYMENTS */}
 
                     <div className="new-cart__cart">
-                        <h1 className="two__v">Payment options</h1>
+                        <h1 className="two__v">Mogućnosti plaćanja</h1>
                         <div className="payment-options-uni">
                             <img src="/mastercard.png" alt="" style={{backgroundColor: "#fff", padding: "0.1rem"}}/>
                             <img src="/visa.png" alt=""/>
@@ -164,31 +164,31 @@ const CartPage = () => {
                     {/* TOTAL */}
 
                     <div className="new-cart__cart">
-                        <h1 className="two__v">Total</h1>
+                        <h1 className="two__v">Ukupno</h1>
                         <div className="__flex-price">
-                            <p>Discount:</p>
+                            <p>Popust:</p>
                             <p><b>{cart.discountTotal}</b></p>
                         </div>
                         <div className="__flex-price __last">
-                            <p>Shipping:</p>
-                            <p><b>{"$" + cart.shippingTotal.substring(1)}</b></p>
+                            <p>Dostava:</p>
+                            <p><b>{cart.shippingTotal}</b></p>
                         </div>
                         <div className="__flex-price __last">
-                            <p>Total amount:</p>
-                            <p><b>{"$" + cart.totalProductsPrice.substring(1)}</b></p>
+                            <p>Ukupan iznos:</p>
+                            <p><b>{cart.totalProductsPrice}</b></p>
                         </div>
                         <div className="__divider-two"></div>
-                        <Link href="/checkout"><button className="button button-white">Go to checkout</button></Link>
+                        <Link href="/checkout"><button className="button button-white">Idi na naplatu</button></Link>
                     </div>
 
                     {/* COUPONS */}
 
                     <div className="new-cart__cart">
-                        <h1 className="one__v">Coupon <span>(Optional)</span></h1>
+                        <h1 className="one__v">Kupon <span>(Opciono)</span></h1>
                         {/* <div className="divider"></div> */}
 
                         <form className="coupons" onSubmit={ handleFormSubmit } >
-                            <h3>Please enter code:</h3>
+                            <h3>Unesite kod:</h3>
                             <div className="coupon">
                                 <input type="text" className="input" onChange={handleOnChange}/>
                                 <input type="submit" className="input__button" value="OK"/>
@@ -198,12 +198,12 @@ const CartPage = () => {
                         {
                             success === 1 ?
                             <div className="coupons-succ has-text-centered">
-                                <p>The coupon has been added to your cart</p>
+                                <p>Kupon je dodan u vašu korpu</p>
                             </div>
                             :
                             success === 2 ?
                             <div className="coupons-succ alt has-text-centered">
-                                <p>The coupon code is not correct</p>
+                                <p>Kôd kupona nije tačan</p>
                             </div>
                             :
                             ""
@@ -216,11 +216,11 @@ const CartPage = () => {
             
             : 
             <>
-                <h1>Your Cart</h1>
+                <h1>Vaša korpa</h1>
                 <div className="divider"></div>
                 <div className="has-text-centered cart__empty">
-                        <h3 className="has-text-centered">Your cart is empty, add some products in it to continue!</h3>
-                        <Link href="/products"><button className="has-text-centered button">Go to shop</button></Link>
+                        <h3 className="has-text-centered">Vaša korpa je prazna, dodajte neke proizvode u nju da nastavite!</h3>
+                        <Link href="/proizvodi"><button className="has-text-centered button">Idi u prodavnicu</button></Link>
                 </div>
             </>
             

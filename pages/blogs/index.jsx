@@ -58,7 +58,7 @@ export default function index(props) {
                                     <div className="single__content">
                                         <h3>{p.title}</h3>
                                         <div dangerouslySetInnerHTML={{  __html: p.excerpt }}></div>
-                                        <Link href={"/blogs/" + "/" + p.slug}><a><button className="button post__more">Read more <img src="/but-next.svg" alt="" /></button></a></Link>
+                                        <Link href={"/blogs/" + "/" + p.slug}><a><button className="button post__more">Vidi više <img src="/but-next.svg" alt="" /></button></a></Link>
                                     </div>
 
                                 </div>

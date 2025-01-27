@@ -35,7 +35,7 @@ query GET_CAT($category: String, $category_id: ID!) {
       image {
         id
         title
-        sourceUrl(size: WOOCOMMERCE_THUMBNAIL)
+        sourceUrl(size: SHOP_SINGLE)
       }
       attributes {
         nodes {

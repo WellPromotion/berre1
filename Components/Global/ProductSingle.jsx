@@ -12,7 +12,7 @@ export default function ProductSingle(props) {
 
   return (
       <div className="product__single">
-        <Link href={`/products/${product.productCategories.nodes[0].slug}/${product.slug}`}><a>
+        <Link href={`/proizvodi/${product.productCategories.nodes[0].slug}/${product.slug}`}><a>
             <div className="product__img">
                 <LazyImage
                     key={product.id}
@@ -21,7 +21,7 @@ export default function ProductSingle(props) {
                 />
                 {(() => {
                         if (product.onSale === true){
-                            return(<div className="img__sale"><h6>On Sale</h6></div>)
+                            return(<div className="img__sale"><h6>AKCIJA</h6></div>)
                         } else{
                             return('')
                         }
@@ -39,7 +39,7 @@ export default function ProductSingle(props) {
                         :
                         <div className="price__wrap"><p className="price__reg">{ product.price }</p></div>
                     }
-                    <p className={product.stockStatus === "IN_STOCK" ? "__stock" : "__stock __alt"}>{product.stockStatus === "IN_STOCK" ? "In stock" : "Out of stock"}</p>
+                    <p className={product.stockStatus === "IN_STOCK" ? "__stock" : "__stock __alt"}>{product.stockStatus === "IN_STOCK" ? "Dostupno" : "Nema na zalihama"}</p>
                 </div>
             </div>
             
@@ -48,11 +48,11 @@ export default function ProductSingle(props) {
         {/* BUTTON */}
         {
             product.stockStatus === "IN_STOCK" ?
-            <Link href={`/products/${product.productCategories.nodes[0].slug}/${product.slug}`}><a>
-                <button className="button product-single__cart"> <img src="/cart.svg" alt="" /> View Options</button>
+            <Link href={`/proizvodi/${product.productCategories.nodes[0].slug}/${product.slug}`}><a>
+                <button className="button product-single__cart"> <img src="/cart.svg" alt="" /> Opcije pregleda</button>
             </a></Link>
             :
-            <button className="button product-single__cart __disabled"> <img src="/cart.svg" alt="" /> Add to Cart</button>
+            <button className="button product-single__cart __disabled"> <img src="/cart.svg" alt="" /> Dodaj u korpu</button>
         }
       </div>
   );

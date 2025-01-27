@@ -86,7 +86,7 @@ const CartItems = ({
                 <img className="cart__image" src={item.image}/>
                 <div className="__info">
                     <h5>{item.name}</h5>
-                    <p>{ ( 'string' !== typeof item.price ) ? "$ " + item.price.toFixed( 2 ) : item.price }</p>
+                    <p>{ ( 'string' !== typeof item.price ) ? item.price.toFixed( 2 ) + "KM"  : item.price }</p>
                 </div>
             </div>
             

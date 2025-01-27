@@ -63,7 +63,7 @@ const CartItemsWrap = () => {
                             )}
                     </div>
                 </div>
-            ) : <h3 className="cart__empty has-text-centered">Your Cart is empty</h3>}
+            ) : <h3 className="cart__empty has-text-centered">Vaša korpa je prazna</h3>}
         </>
     )
 };

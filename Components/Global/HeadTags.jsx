@@ -16,7 +16,7 @@ export default function HeadTags(props) {
             }
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"/>
 
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-P72TTN2N1P"></script>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNCJ8H6YGB"></script>
 
             <script defer dangerouslySetInnerHTML={
                     { __html: `
@@ -24,7 +24,7 @@ export default function HeadTags(props) {
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
 
-                        gtag('config', 'G-P72TTN2N1P');
+                        gtag('config', 'G-NNCJ8H6YGB');
                     `}
             }></script>
             

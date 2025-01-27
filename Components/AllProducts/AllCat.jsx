@@ -7,7 +7,7 @@ export default function AllCat(props) {
     const [stockOnly, setStockOnly] = useState(false);
     const [priceOnly, setPriceOnly] = useState("3000");
     const [amountProducts, setAmountProducts] = useState(24);
-    const [sortBy, setSortBy] = useState("H-L");
+    const [sortBy, setSortBy] = useState("N-O");
     const [pageNumber, setPageNumber] = useState(1);
 
     useEffect(() => {
@@ -126,7 +126,7 @@ export default function AllCat(props) {
 
             <div className="filters__top columns is-vcentered">
               <div className="column is-2">
-                <button className="button __filter" onClick={isHidden === false ? ()=> setIsHidden(true): ()=> setIsHidden(false)}>{isHidden === false ?"Hide Filters" : "Show Filters"}</button>
+                <button className="button __filter" onClick={isHidden === false ? ()=> setIsHidden(true): ()=> setIsHidden(false)}>{isHidden === false ?"Sakrij filtere" : "Prikaži filtere"}</button>
               </div>
 
               <div className="column is-10">
@@ -135,17 +135,17 @@ export default function AllCat(props) {
                         {
                             filterAll(priceOnly, stockOnly).length > amountProducts ?
                                 pageNumber === 1 ?
-                                `1 - ${parseInt(amountProducts)} of ${products.length}`
+                                `1 - ${parseInt(amountProducts)} od ${products.length}`
                                 :
-                                `${(pageNumber - 1) * parseInt(amountProducts)} - ${(((pageNumber - 1) * parseInt(amountProducts)) + parseInt(amountProducts)) > filterAll(priceOnly, stockOnly).length ? filterAll(priceOnly, stockOnly).length : (((pageNumber - 1) * parseInt(amountProducts)) + parseInt(amountProducts))} of ${filterAll(priceOnly, stockOnly).length}`
+                                `${(pageNumber - 1) * parseInt(amountProducts)} - ${(((pageNumber - 1) * parseInt(amountProducts)) + parseInt(amountProducts)) > filterAll(priceOnly, stockOnly).length ? filterAll(priceOnly, stockOnly).length : (((pageNumber - 1) * parseInt(amountProducts)) + parseInt(amountProducts))} od ${filterAll(priceOnly, stockOnly).length}`
                             :
-                            `1 - ${filterAll(priceOnly, stockOnly).length} of ${filterAll(priceOnly, stockOnly).length}`
+                            `1 - ${filterAll(priceOnly, stockOnly).length} od ${filterAll(priceOnly, stockOnly).length}`
                         }
                     </p>
                     <div className="sorting__left">
 
                         <div className="__sorting sorting__amount">
-                            <p>View:</p>
+                            <p>Prikaži:</p>
                             <div className="select">
                                 <select defaultValue={24} onChange={(e) => setAmountProducts(e.target.value)}>
                                     <option value={12}>12</option>
@@ -158,15 +158,15 @@ export default function AllCat(props) {
                         </div>
 
                         <div className="__sorting sorting__by">
-                            <p>Sort By:</p>
+                            <p>Sortiraj po:</p>
                             <div className="select">
-                                <select defaultValue={"H-L"} onChange={(e) => setSortBy(e.target.value)}>
-                                    <option value="H-L">Price: High to Low</option>
-                                    <option value="L-H">Price: Low to High</option>
-                                    <option value="N-O">Date: New to Old</option>
-                                    <option value="O-N" >Date: Old to New</option>
-                                    <option value="A-Z">Name: A to Z</option>
-                                    <option value="Z-A">Name: Z to A</option>
+                                <select defaultValue={"N-O"} onChange={(e) => setSortBy(e.target.value)}>
+                                    <option value="N-O">Datum: od novog do starog</option>
+                                    <option value="O-N" >Datum: od starog do novog</option>
+                                    <option value="A-Z">Ime: A do Z</option>
+                                    <option value="Z-A">Ime: Z do A</option>
+                                    <option value="L-H">Cijena: niske do visoke</option>
+                                    <option value="H-L">Cijena: visoke do niske</option>
                                 </select>
                             </div>
                         </div>
@@ -186,21 +186,21 @@ export default function AllCat(props) {
                         <div className="change__left">
 
                             <div className="change__item">
-                                <h4>Availability</h4>
+                                <h4>Dostupnost</h4>
                                 <div className={ stockOnly === true ? "change__check __active" : "change__check" } onClick={ stockOnly !== true ? ()=> setStockOnly(true) : ()=> setStockOnly(false)}>
                                     <div className="change__box">
                                         <div className="change__active"></div>
                                     </div>
-                                    <p>In stock</p>
+                                    <p>Na lageru</p>
                                 </div>
                             </div>
 
                             <div className="change__item">
     
-                                <h4 className="__alt">Price</h4>
+                                <h4 className="__alt">Cijena</h4>
                                 <div className="price__top">
                                     <p>0</p>
-                                    <p>{parseInt(priceOnly) >= 2500 ? "Unlimited" : "$" + priceOnly}</p>
+                                    <p>{parseInt(priceOnly) >= 2500 ? "Unlimited" : priceOnly + "KM" }</p>
                                 </div>
                                 
                                 

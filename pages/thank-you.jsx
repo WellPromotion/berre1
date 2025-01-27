@@ -6,7 +6,7 @@ import Nav from "../Components/Nav/Nav";
 export default function Thank() {
 
     const headData = {
-        title : "Thank You - Berre Furniture",
+        title : "Thank You - Berre namještaj",
         meta : ""
     }
 
@@ -16,12 +16,12 @@ export default function Thank() {
     <Nav current=""/>
 
     <section className="section __account sec__home">
-        <img src="https://shop.berre.ca/wp-content/uploads/2022/01/berre-watermark-hq.png" alt="" className="home__watermark"/>
+        <img src="https://shop.berre.ba/wp-content/uploads/2022/01/berre-watermark-hq.png" alt="" className="home__watermark"/>
         <div className="container">
             <div className="account__placeholder">
                 <div className="account__wrap">
-                    <h1><span>Thank You</span> - For your purchase</h1>
-                    <p>Thank you for using Berre Furniture, and email with an order summary will be sent soon!</p>
+                    <h1><span>Hvala ti</span> - Za vašu kupovinu</h1>
+                    <p>Hvala vam što koristite Berre namještaj, a e-mail sa sažetkom narudžbe bit će poslan uskoro!</p>
                 </div>
             </div>
         </div>

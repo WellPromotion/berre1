@@ -4,7 +4,7 @@ const GET_CONTACT = gql`
 query GET_CONTACT {
   page(id: "710", idType: DATABASE_ID) {
     id
-    title
+    title 
     contactPage {
       contactInformation {
         contactFormHeader
@@ -36,16 +36,6 @@ query GET_CONTACT {
         locationTwoOpeningOne
         locationTwoOpeningTwoCopy
         locationTwoType
-        locationThreeDetails
-        locationThreeImage {
-          id
-          sourceUrl(size: LARGE)
-        }
-        locationThreeLocation
-        locationThreeName
-        locationThreeOpeningOne
-        locationThreeOpeningTwo
-        locationThreeType
       }
     }
   }

@@ -42,21 +42,21 @@ const NavCart = (props) => {
                 <div className="__icon nav__cart">
                     <span>{productsCount}</span>
                 </div>
-                Cart
+                KORPA
             </a></Link> 
             {
                 current !== "cart" ?
             <div className="menu__cart__wrap">
                 <div className="menu__cart__push">
                     <div className="menu__cart__head">
-                        <p className="menu__cart__title">Your cart</p>
+                        <p className="menu__cart__title">Vaša korpu</p>
                         <button className="close__icon" onClick={cartActive === 0 ? () => setCartActive(1) : () => setCartActive(0)}><img src="/x-mark.svg" alt="" /></button>
                     </div>
                     <div className="menu__cart__body">
                         <CartItemsWrap/>
                     </div>
                     <div className="menu__cart__end">
-                        <Link href="/cart"><a> <button className="button">View your cart</button></a></Link>
+                        <Link href="/cart"><a> <button className="button">Pogledajte korpu</button></a></Link>
                     </div>
                 </div>
             </div>

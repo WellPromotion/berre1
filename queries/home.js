@@ -23,7 +23,7 @@ query GET_HOME {
           image {
             id
             title
-            sourceUrl(size: WOOCOMMERCE_THUMBNAIL)
+            sourceUrl(size: SHOP_SINGLE)
           }
           attributes {
             nodes {
@@ -106,6 +106,14 @@ query GET_HOME {
             title
             sourceUrl(size: LARGE)
           }
+          productAdditional {
+            additionalProduct {
+              productThumbnail {
+                id
+                mediaItemUrl
+              }
+            }
+          }
           attributes {
             nodes {
               id
@@ -155,7 +163,7 @@ query GET_HOME {
           image {
             id
             title
-            sourceUrl(size: WOOCOMMERCE_THUMBNAIL)
+            sourceUrl(size: SHOP_SINGLE)
           }
           attributes {
             nodes {
@@ -185,7 +193,7 @@ query GET_HOME {
           slug
         }
     }
-    categories: productCategories(first: 9999, where: {exclude: ["15", "47"]}) {
+    categories: productCategories(first: 9999, where: {exclude: "15"}) {
         nodes {
           id
           databaseId

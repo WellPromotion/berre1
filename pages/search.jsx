@@ -16,8 +16,8 @@ export default function SearchPage(props) {
     const search = router.query.search;
 
     const headData = {
-        title : `Results for ${search} - Berre Furniture`,
-        meta : "BERRE - META"
+        title : `Rezultati za ${search} - Berre namještaj`,
+        meta : ""
     }
 
 
@@ -28,13 +28,13 @@ export default function SearchPage(props) {
 
         <section className="section cat__hero">
             <div className="container">
-                <div className="cat__hero__main" style={{ backgroundImage:`linear-gradient(0deg,rgba(0,0,0,.3),rgba(0,0,0,.3)), url(https://shop.berre.ca/wp-content/uploads/2022/05/scalabasehead.jpg)` }}>
-                    <h2>{`Results for "${search}"`}</h2>
+                <div className="cat__hero__main" style={{ backgroundImage:`linear-gradient(0deg,rgba(0,0,0,.3),rgba(0,0,0,.3)), url(https://shop.berre.ba/wp-content/uploads/2022/05/scalabasehead.jpg)` }}>
+                    <h2>{`Rezultati za "${search}"`}</h2>
                 </div>
                 <div className="hero__breadcrumbs">
                     <Link href="/"><a><p>Home</p></a></Link>
                     <p className="bc__div">/</p>
-                    <Link href={`/`}><a className="__current"><p>Search</p></a></Link>
+                    <Link href={`/`}><a className="__current"><p>Traži</p></a></Link>
                 </div>
             </div>
         </section>

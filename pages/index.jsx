@@ -93,7 +93,7 @@ export default function Home(props) {
 
       {/* CATEGORIES */}
       <section className="section sec__home">
-      <img src="https://shop.berre.ca/wp-content/uploads/2022/01/berre-watermark-hq.png" alt="" className="home__watermark"/>
+      <img src="https://shop.berre.ba/wp-content/uploads/2022/01/berre-watermark-hq.png" alt="" className="home__watermark"/>
         <div className="container">
           <div className="home__cat">
             <div className="home__cat__title">
@@ -102,31 +102,19 @@ export default function Home(props) {
 
             <div className="columns is-multiline home__cat__wrap">
 
-              {
+            {
                 categories.length ?
                   categories.map(cat => 
                     <div className="column is-4" key={cat.id}>
-                      <div className="home__cat__item">
-                        <div className="home__cat__img__wrap">
-                          <img src={cat.image.sourceUrl} alt="" className="home__cat__img" />
-                          {/* <div className="home__cat__price">
-
-                            <div className="home__cat__txt">
-                              <p className="__uni">From</p>
-                              <p>{cat.products.nodes[0].price}</p>
-                            </div>
-                            
-                          </div> */}
-                        </div>
-                        
+                      <Link href={`/proizvodi/${cat.slug}`}><a>
+                      <div className="home__cat__item __back" style={{ backgroundImage:`linear-gradient(0deg,rgba(0,0,0,.3),rgba(0,0,0,.3)), url(${cat.image.sourceUrl})` }} >
+                        {/* <img src={} alt="" className="home__cat__img" /> */}
                         <div className="home__cat__txt">
-                          <h2>{cat.name}</h2>
-                          <Link href={`/products/${cat.slug}`}><a>
-                            <button className="button">View products</button>
-                          </a></Link>
+                          <h4>{cat.name}</h4>
+                          {/* <p>From <span>{cat.products.nodes[0].price}</span></p> */}
                         </div>
                       </div>
-                      
+                      </a></Link>
                     </div>
                   )
                 :
@@ -140,11 +128,11 @@ export default function Home(props) {
       </section>
 
       {/* PDF */}
-      {/* <section className="section pdf__sec">
+      <section className="section pdf__sec">
         <div className="container">
           <div className="home__pdf">
             <div className="home__pdf__title">
-              <h3>{pageData.titleTwoPdf}</h3>
+              <h3>NAŠI KATALOZI</h3>
             </div>
 
             <div className="home__pdf__wrap">
@@ -156,8 +144,8 @@ export default function Home(props) {
                       <img src={pageData.pdfOneImage.sourceUrl} alt="" />
                     </div>
                     <div className="home__pdf__text">
-                      <h4>{pageData.pdfOneName}</h4>
-                      <button className="button" onClick={()=> setPdf(pageData.pdfOneFile.mediaItemUrl)}>View More</button>
+                      <h4>BERRE 2022 - Namještaj</h4>
+                      <button className="button" onClick={()=> {setPdf("/berre-katalog-2022.pdf"); setPageNumber(1)}}>Vidi više</button>
                     </div>
                   </div>
                 </div>
@@ -167,8 +155,8 @@ export default function Home(props) {
                       <img src={pageData.pdfTwoImage.sourceUrl} alt="" />
                     </div>
                     <div className="home__pdf__text">
-                      <h4>{pageData.pdfTwoName}</h4>
-                      <button className="button __alt" onClick={()=> setPdf(pageData.pdfTwoFile.mediaItemUrl)}>View More</button>
+                      <h4>BERRE 2022 - Kreveti / Madrac</h4>
+                      <button className="button __alt" onClick={()=> {setPdf("/berre-kreveti.pdf"); setPageNumber(1)}}>Vidi više</button>
                     </div>
                   </div>
                 </div>
@@ -178,7 +166,7 @@ export default function Home(props) {
                 
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* NEW PRODUCTS */}
       <section className="section">
@@ -208,10 +196,10 @@ export default function Home(props) {
                         <div className="column is-3" key={blog.id}>
                             <div className="__blog">
                                 <img className="__main-img" src={blog.featuredImage.node.sourceUrl} alt="" />
-                                <p className="__date">{blog.date.split("T").shift()}</p>
+                                {/* <p className="__date">{blog.date.split("T").shift()}</p> */}
                                 <p className="__title">{blog.title}</p>
                                 <div dangerouslySetInnerHTML={{  __html: blog.excerpt }}></div>
-                                <Link href={"/blogs/" + blog.slug}><a><button className="button __img">Read more <img src="/but-next.svg" alt="" /></button></a></Link>
+                                <Link href={"/blogs/" + blog.slug}><a><button className="button __img">Vidi više <img src="/but-next.svg" alt="" /></button></a></Link>
                             </div>
                         </div>
                     )
@@ -227,7 +215,7 @@ export default function Home(props) {
 
       {/* STYLES */}
       <section className="section sec__home">
-      <img src="https://shop.berre.ca/wp-content/uploads/2022/01/berre-watermark-hq.png" alt="" className="home__watermark"/>
+      <img src="https://shop.berre.ba/wp-content/uploads/2022/01/berre-watermark-hq.png" alt="" className="home__watermark"/>
         <div className="container">
           <div className="home__cat  __alt">
             <div className="home__cat__title">
@@ -248,8 +236,8 @@ export default function Home(props) {
                         <div className="home__cat__txt">
                           <h2>{style.title}</h2>
                           <p>{style.styles.styleExcerpt}</p>
-                          <Link href={`/style/${style.slug}`}><a>
-                            <button className="button">View more</button>
+                          <Link href={`/stilovi/${style.slug}`}><a>
+                            <button className="button">Vidi više</button>
                           </a></Link>
                         </div>
                       </div>
@@ -262,25 +250,6 @@ export default function Home(props) {
 
             </div>
 
-          </div>
-        </div>
-        
-      </section>
-      
-      <section id="endParagraph" className="section">
-      <div className="container">
-          <div className="columns">
-            <div className="column">
-              <p>
-              Welcome to<b> Berre Furniture</b>, home of <b>Turkish Furniture in Toronto</b>, where traditional craftsmanship meets modern luxury. Our exclusive collection of custom furniture is hand-crafted by skilled artisans in Turkey using the finest materials and techniques.
- <br /> <br />
-From <b>ornate sofas and chairs to intricately carved beds and tables</b>, each piece in our collection is a work of art that will elevate the style and sophistication of any space.
- <br />  <br />
-Our designers work with you in mind to create the perfect piece for your home or business, using our expertise to bring your dream furniture to life. From start to finish, our team is dedicated to ensuring that your experience with <b>Berre Furniture</b> is unparalleled.
- <br /> <br />
-We invite you to explore our collection and discover the timeless beauty and exceptional quality of our luxury furniture. <b>Contact us today</b> to get your own piece of art.
-              </p>
-            </div>
           </div>
         </div>
       </section>

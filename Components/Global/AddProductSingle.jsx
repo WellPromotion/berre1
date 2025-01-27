@@ -57,7 +57,7 @@ const AddProductSingle = (props) => {
 
     return(
         <React.Fragment>
-            <button className="button product-single__cart" onClick={ () => addToCart() }> <img src="/cart.svg" alt="" /> Add to Cart</button>
+            <button className="button product-single__cart" onClick={ () => addToCart() }> <img src="/cart.svg" alt="" /> Dodaj u korpu</button>
         </React.Fragment>
 	)
  };

@@ -116,7 +116,7 @@ query GET_PRODUCT( $id: ID! ) {
             image {
               id
               title
-              sourceUrl(size: WOOCOMMERCE_THUMBNAIL)
+              sourceUrl(size: SHOP_SINGLE)
             }
             attributes {
               nodes {
@@ -167,7 +167,7 @@ query GET_PRODUCT( $id: ID! ) {
             image {
               id
               title
-              sourceUrl(size: WOOCOMMERCE_THUMBNAIL)
+              sourceUrl(size: SHOP_SINGLE)
             }
             attributes {
               nodes {

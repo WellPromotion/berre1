@@ -24,7 +24,7 @@ export default function Blog(props) {
     <section className="section post__hero">
         <div className="container">
             <div className="hero__wrap">
-                <h3>Posted on {post.date.split("T").shift()}</h3>
+                <h3>Objavljeno na {post.date.split("T").shift()}</h3>
                 <h1>{post.title}</h1>
                 {/* <h2>{post.categories.nodes[0].name}</h2> */}
                 <img src={post.featuredImage.node.sourceUrl} alt="" className="__main"/>
@@ -48,7 +48,7 @@ export default function Blog(props) {
         <div className="container">
             <div className="more__wrap">
                 <div className="__top">
-                    <p>Read more articles</p>
+                    <p>Pročitajte više članaka</p>
                     <Link href="/blogs"><a><button className="button post__more">More <img src="/but-next.svg" alt="" /></button></a></Link>
                 </div>
             
@@ -66,7 +66,7 @@ export default function Blog(props) {
                                     <div className="single__content">
                                         <h3>{p.title}</h3>
                                         <div dangerouslySetInnerHTML={{  __html: p.excerpt }}></div>
-                                        <Link href={"/blogs/" + "/" + p.slug}><a><button className="button post__more">Read more <img src="/but-next.svg" alt="" /></button></a></Link>
+                                        <Link href={"/blogs/" + "/" + p.slug}><a><button className="button post__more">Vidi više <img src="/but-next.svg" alt="" /></button></a></Link>
                                     </div>
 
                                 </div>

@@ -10,7 +10,7 @@ const PaymentMethods = ( { input } ) => {
 			<div className="checkbox-wrap" >
 				<label className="checkbox">
 					<input value="cod" className="checkbox" name="paymentMethod" type="radio" onClick={()=>setActiveInfo(0)} />
-					<span className="checkbox-txt">Pay on delivery</span>
+					<span className="checkbox-txt">Plaćanje po dostavi</span>
 				</label>
 			</div>
 

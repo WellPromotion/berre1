@@ -23,7 +23,7 @@ query GET_ALL {
           image {
             id
             title
-            sourceUrl(size: WOOCOMMERCE_THUMBNAIL)
+            sourceUrl(size: SHOP_SINGLE)
           }
           attributes {
             nodes {

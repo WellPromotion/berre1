@@ -17,7 +17,7 @@ import Success from '../Components/Checkout/Success';
 export default function Checkout() {
 
     const headData = {
-        title : "Checkout - Berre Furniture",
+        title : "Provjeri - Berre namještaj",
         meta : ""
     }
 
@@ -63,6 +63,7 @@ export default function Checkout() {
 		},
 		onError: ( error ) => {
 			if ( error ) {
+                
 				console.log("ERROR", error)
 			}
 		}
@@ -105,6 +106,7 @@ export default function Checkout() {
 		onError: ( error ) => {
 			if ( error ) {
 				console.log("ERROR", error)
+                setError("Došlo je do greške, molimo provjerite informacije koje ste dali")
 			}
 		}
 	} );
@@ -117,7 +119,7 @@ export default function Checkout() {
         if(input.paymentMethod === ""){
             setError("Please input a payment method")
         } else{
-            setError("")
+            // setError("")
             // console.log("INPUT", input)
             setOrderData(input)
         }
@@ -145,7 +147,7 @@ export default function Checkout() {
         checkoutResponse === undefined ?
         <section className="section checkout__main">
             <div className="container">
-                <h1><span>Checkout</span> - Make your purchase</h1>
+                <h1><span>Naplata</span> - obavite kupovinu</h1>
 
 
                 <form onSubmit={ handleFormSubmit } className="checkout__form">
@@ -153,7 +155,7 @@ export default function Checkout() {
 
                     <div className="column is-6">
 
-                        <h3>Your information:</h3>
+                        <h3>Vaše informacije:</h3>
 
                         <Billing input={ input } handleOnChange={ handleOnChange } />
 
@@ -165,8 +167,8 @@ export default function Checkout() {
                           cart && undefined !== cart.products ? (
 
                             <div className="checkout__payment">
-                                <h3>Your order:</h3>
-                                <h4>Cart - <span>{productsCount} Items </span></h4>
+                                <h3>Vaša narudžba:</h3>
+                                <h4>Cart - <span>{productsCount} predmeti </span></h4>
                                 <div className="divider"></div>
 
                                 <div className="cart__item__wrapper">
@@ -188,16 +190,16 @@ export default function Checkout() {
 
                                 <div className="cart__text__sum">
                                     <div className="__flex-price">
-                                        <p>Discount:</p>
+                                        <p>Popust:</p>
                                         <p><b>{cart.discountTotal}</b></p>
                                     </div>
                                     <div className="__flex-price __last">
-                                        <p>Shipping:</p>
-                                        <p><b>{"$" + cart.shippingTotal.substring(1)}</b></p>
+                                        <p>Dostava:</p>
+                                        <p><b>{cart.shippingTotal}</b></p>
                                     </div>
                                     <div className="__flex-price __last">
-                                        <p>Total amount:</p>
-                                        <p><b>{"$" + cart.totalProductsPrice.substring(1)}</b></p>
+                                        <p>Ukupan iznos:</p>
+                                        <p><b>{cart.totalProductsPrice}</b></p>
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +208,7 @@ export default function Checkout() {
 
                         {/* PAYMENT */}
                         <div className="checkout__payment __nf">
-                            <h3>Payment method:</h3>
+                            <h3>Način plaćanja:</h3>
                             <PaymentMethods input={ input }/>
                         </div>
 
@@ -221,10 +223,10 @@ export default function Checkout() {
                         }
                         
                         
-                        <button className="button check__out" type="submit"> Complete Purchase</button>
+                        <button className="button check__out" type="submit"> Završi kupovinu</button>
 
                         {/* TERMS */}
-                        <p className="check__terms">By clicking "Complete Purchase" you agree to our <Link href="/terms-conditions"><a>Terms and Conditions</a></Link>, and our <Link href="/policies"><a>Shipping Policy</a></Link> .</p>
+                        <p className="check__terms">Klikom na "Završi kupovinu" slažete se s našim <Link href="/odredbe-i-uslovi"><a>Odredbe i uslovi</a></Link>, i naše <Link href="/uslovi-isporuke"><a>Uslovi isporuke</a></Link> .</p>
 
                         {/* {checkoutLoading && <p>Processing Order...</p>}
 						{checkoutError && <p>An Error has occured</p>} */}
