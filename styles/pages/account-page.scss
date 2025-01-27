@@ -1,0 +1,36 @@
+.__account.sec__home{
+    padding-top: 22rem;
+    padding-bottom: 8rem;
+    .home__watermark{
+        bottom: -20rem;
+    }
+    .account__placeholder{
+        background-color: #f4f4f4;
+        padding: 5rem 3rem;
+        width: 750px;
+        max-width: 100%;
+        border-radius: 2px;
+        margin: auto;
+        .account__wrap{
+            color: #fff;
+            text-align: center;
+            h1{
+                font-size: 24px;
+                margin-bottom: 1rem;
+                color: #000;
+                span{
+                    text-decoration: underline;
+                    color: $blue;
+                }
+            }
+            p{
+                color: $black;
+                font-size: 14px;
+            }
+        }
+    }
+    @media screen and (max-width: 1080px) {
+        padding-top: 10rem;
+        padding-bottom: 7rem;
+    }
+}

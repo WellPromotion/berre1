@@ -1,0 +1,57 @@
+.product__slider{
+  margin-bottom: 2rem;
+  .slider__title{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      height: 1px;
+      background-color: #000;
+      opacity: 0.1;
+      transform: translate(0 -50%);
+    }
+    h3{
+      position: relative;
+      font-size: 24px;
+      color: #000;
+      text-transform: uppercase;
+      font-weight: 300;
+      text-align: center;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      background-color: #fff;
+      max-width: 100%;
+      width: max-content;
+      margin: auto;
+    }
+    @media screen and (max-width: 720px) {
+      h3{
+        font-size: 20px;
+      }
+    }
+  }
+  .slider__body{
+    .react-multiple-carousel__arrow{
+      background-color: #f4f4f4;
+      opacity: 0.75;
+      transition: all 0.2s;
+      &:hover{
+        opacity: 1;
+      }
+      &::before{
+        color: $black;
+      }
+    }
+    .react-multiple-carousel__arrow--right{
+      right: 15px;
+    }
+    .react-multiple-carousel__arrow--left{
+      left: 15px;
+    }
+  }
+}

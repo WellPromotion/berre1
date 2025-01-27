@@ -1,0 +1,192 @@
+.home__hero{
+  padding-top: 12.5rem;
+  padding-bottom: 1rem;
+  .hero__shipping{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $black;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    box-shadow: 1px 7px 29px 0px rgba(0,0,0,0.1);
+      -webkit-box-shadow: 1px 5px 10px 0px rgba(0,0,0,0.1);
+      -moz-box-shadow: 1px 5px 10px 0px rgba(0,0,0,0.1);
+    .shipping__image__wrap{
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $blue;
+      margin-right: 1rem;
+      img{
+        filter: invert(100%);
+        width: 25px;
+      }
+    }
+    button.button{
+      background-color: $orange;
+      color: #fff;
+      border: 1px solid #fff;
+      &:hover{
+        background-color: $blue;
+      }
+    }
+    .__right{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    p{
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      span{
+        color: $orange;
+        text-decoration: underline;
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      border-radius: 5px;
+      display: block;
+      text-align: center;
+      .__right{
+        display: block;
+        text-align: center;
+        .shipping__image__wrap{
+          margin: auto;
+          margin-bottom: 1rem;
+        }
+        p{
+          font-size: 14px;
+          margin-bottom: 1rem;
+        }
+      }
+      button.button{
+        width: 100%;
+        font-size: 13px;
+      }
+    }
+  }
+  .home__hero__main{
+    padding: 2rem;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 0.3s;
+    &:hover{
+      transform: scale(1.01);
+    }
+    @media screen and (max-width: 1024px) {
+      height: 300px;
+      .home__hero__deal{
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        height: 130px !important;
+        width: 130px !important;
+        .deal__wrap{
+          height: 120px !important;
+          width: 120px !important;
+          .__wrap{
+            h4.__main{
+              font-size: 18px !important;
+            }
+            p{
+              font-size: 10px !important;
+            }
+          }
+        }
+        &.hero__alt{
+          top: auto;
+          left: auto;
+          right: 1rem !important;
+          bottom: 1rem !important;
+        }
+
+      }
+    }
+    .home__hero__deal{
+      background-color: #fff;
+      background: linear-gradient(50deg, rgba(0, 2, 67, 0.92) 30%, rgba(255, 172, 54, 0.92) 70%);
+      height: 180px;
+      width: 180px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 1px 7px 29px 0px rgba(0,0,0,0.41);
+      -webkit-box-shadow: 1px 7px 29px 0px rgba(0,0,0,0.41);
+      -moz-box-shadow: 1px 7px 29px 0px rgba(0,0,0,0.41);
+      &.hero__alt{
+        position: absolute;
+        right: 15%;
+        bottom: 25%;
+        height: 170px;
+        width: 170px;
+        background: rgba(255, 172, 54, 0.5);
+        .deal__wrap{
+          background-color: $orange;
+          .__wrap{
+            p{
+              color: #fff;
+            }
+            p.__price{
+              font-size: 18px;
+              font-weight: 500;
+              text-transform: uppercase;
+            }
+            h4.__name{
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: 24px;
+              color: #fff;
+              line-height: 100%;
+            }
+            p.__cat{
+              font-size: 14px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      .deal__wrap{
+        background-color: #f4f4f4;
+        height: 160px;
+        width: 160px;
+        border-radius: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 7px 29px 0px rgba(0,0,0,0.41);
+        -webkit-box-shadow: 1px 7px 29px 0px rgba(0,0,0,0.41);
+        -moz-box-shadow: 1px 7px 29px 0px rgba(0,0,0,0.41);
+        .__wrap{
+          h4.__main{
+            font-size: 24px;
+            line-height: 105%;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: $blue;
+            margin-bottom: 0.25rem;
+          }
+          p{
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1080px) {
+    padding-top: 6rem;
+  }
+}

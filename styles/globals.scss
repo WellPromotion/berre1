@@ -1,0 +1,161 @@
+//IMPORTS
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
+
+//VAR
+
+$grey1: #EBEBEB;
+$grey2: #F7F7F7;
+$grey3: #E2E2E2;
+$green: #6BA259;
+$red: #CE4F4A;
+$orange: rgba(255, 172, 54, 0.92);
+$gradientBO: linear-gradient(50deg, rgba(0, 2, 67, 0.92) 30%, rgba(255, 172, 54, 0.92) 70%);
+$black: #323232;
+$blacklight: #96989C;
+$blackp: #787A7E;
+$blackp2: #535556;
+$blue: rgba(0, 2, 67, 0.92);
+
+
+//GLOBAL
+
+button.button{
+  border-radius: 0;
+  padding: 1.25rem 1.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000;
+  border: 1px solid $black;
+  font-size: 14px;
+  background-color: #fff;
+  transition: all 0.2s;
+  &:hover{
+    background-color: $orange;
+    color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+  }
+}
+
+p, li, input, textarea, select, table, button.button, label{
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+button.close__icon{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  img{
+    width: 12px;
+    filter: invert(0);
+    transition: all 0.2s;
+  }
+  &:hover{
+    img{
+      filter: invert(50%);
+    }
+  }
+}
+
+.res__grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-gap: 0rem;
+  .product__single{
+    max-width: 425px;
+    margin: auto;
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+  }
+}
+
+// IMPORT OTHER FILES
+
+@import "header.scss";
+@import "footer.scss";
+@import "./components/product-single.scss";
+@import "./components/product-slider.scss";
+@import "./components/cart.scss";
+@import "./components/home-hero.scss";
+@import "./components/all-categories.scss";
+
+@import "./pages/home.scss";
+@import "./pages/cat.scss";
+@import "./pages/product.scss";
+@import "./pages/cart-page.scss";
+@import "./pages/checkout-page.scss";
+@import "./pages/contact-page.scss";
+@import "./pages/account-page.scss";
+@import "./pages/blog-pages.scss";
+
+.payment-options-uni{
+  margin-top: 1rem;
+  img{
+      height: 35px;
+      width: auto !important;
+      max-width: 100% !important;
+      margin-top: 0.25rem !important;
+      margin-right: 0.75rem !important;
+  }
+}
+
+
+.dynamic__hero{
+  padding-top: 14rem;
+  padding-bottom: 0;
+  @media screen and (max-width: 1080px) {
+    padding-top: 7rem;
+  }
+  &.__full{
+    text-align: center;
+    .dynamic__hero__wrap{
+      p{
+        margin-bottom: 3rem;
+        font-size: 18px;
+      }
+      img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+  .dynamic__hero__wrap{
+    border-bottom: 1px solid #E2E1CD;
+    padding-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    h1{
+      font-weight: bold;
+      font-size: 50px;
+      color: $blue;
+      margin-bottom: 0.5rem;
+    }
+    h2{
+      font-size: 35px;
+      color: #000;
+    }
+    @media screen and (max-width: 1080px) {
+      padding-bottom: 2rem;
+      h1{
+        font-weight: bold;
+        font-size: 45px;
+        color: $blue;
+      }
+      h2{
+        font-size: 25px;
+        color: #000;
+      }
+    }
+  }
+}
+
