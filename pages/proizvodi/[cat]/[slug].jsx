@@ -5,7 +5,7 @@ import Nav from "../../../Components/Nav/Nav";
 import Link from 'next/link'
 import GET_PRODUCT from "../../../queries/get-product";
 import GET_PRODUCT_PATHS from "../../../queries/paths/product-paths";
-import ReactImageMagnify from "react-image-magnify";
+// import ReactImageMagnify from "react-image-magnify";
 import ReactSlick from 'react-slick';
 import { useRouter } from 'next/router';
 import AddProductSingle from "../../../Components/Global/AddProductSingle";
