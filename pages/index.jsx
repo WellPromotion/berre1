@@ -144,7 +144,7 @@ export default function Home(props) {
                       <img src={pageData.pdfOneImage.sourceUrl} alt="" />
                     </div>
                     <div className="home__pdf__text">
-                      <h4>BERRE 20222 - Namještaj</h4>
+                      <h4>BERRE 2022 - Namještaj</h4>
                       <button className="button" onClick={()=> {setPdf("/berre-katalog-2022.pdf"); setPageNumber(1)}}>Vidi više</button>
                     </div>
                   </div>
