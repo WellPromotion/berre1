@@ -124,86 +124,38 @@ export default function ProductPage( props ) {
             <div className="column is-8 has-text-centered ">
               {/* GAL START */}
               <div className="image__gal">
-                <ReactSlick {...settings}>
-                  { product.productAdditional.additionalProduct.productThumbnail !== null ?
-                      <ReactImageMagnify
-                        {...{
-                          smallImage: {
-                            isFluidWidth: true,
-                            src: product.productAdditional.additionalProduct.productThumbnail.sourceUrl,
-                          },
-                          largeImage: {
-                            src: product.productAdditional.additionalProduct.productThumbnail.sourceUrl,
-                            width: 800,
-                            height: 1300,
-                          },
-                          imageClassName: "small-img",
-                          enlargedImageClassName: "large-img",
-                          enlargedImageContainerClassName: "larg-img-cont",
-                          enlargedImagePosition: "over",
-                          lensStyle: { backgroundColor: 'rgba(0,0,0,.6)' }
-                        }}
-                      />
-                    : 
-                    <ReactImageMagnify
-                      {...{
-                        smallImage: {
-                          isFluidWidth: true,
-                          src: "/placeholder.jpg",
-                        },
-                        largeImage: {
-                          src: "/placeholder.jpg",
-                          width: 800,
-                          height: 1300,
-                        },
-                        imageClassName: "small-img widescreen-img",
-                          enlargedImageClassName: "large-img widescreen-img",
-                          enlargedImageContainerClassName: "larg-img-cont",
-                        enlargedImagePosition: "over",
-                        lensStyle: { backgroundColor: 'rgba(0,0,0,.6)' }
-                      }}
-                    />}
-                    {product.galleryImages.edges.length ?
-                      <ReactImageMagnify
-                      {...{
-                        smallImage: {
-                          isFluidWidth: true,
-                          src: product.galleryImages.edges[0].node.sourceUrl,
-                        },
-                        largeImage: {
-                          src: product.galleryImages.edges[0].node.sourceUrl,
-                          width: 800,
-                          height: 1300,
-                        },
-                        imageClassName: "small-img widescreen-img",
-                        enlargedImageClassName: "large-img widescreen-img",
-                        enlargedImageContainerClassName: "larg-img-cont",
-                        enlargedImagePosition: "over",
-                        lensStyle: { backgroundColor: 'rgba(0,0,0,.6)' }
-                      }}
+              <ReactSlick {...settings}>
+                  {product.productAdditional.additionalProduct.productThumbnail !== null ? (
+                    <img
+                      src={product.productAdditional.additionalProduct.productThumbnail.sourceUrl}
+                      alt="Product Thumbnail"
+                      className="small-img"
                     />
-                    : ""}
-                    {product.galleryImages.edges.length >= 2 ?
-                      <ReactImageMagnify
-                      {...{
-                        smallImage: {
-                          isFluidWidth: true,
-                          src: product.galleryImages.edges[1].node.sourceUrl,
-                        },
-                        largeImage: {
-                          src: product.galleryImages.edges[1].node.sourceUrl,
-                          width: 800,
-                          height: 1300,
-                        },
-                        imageClassName: "small-img widescreen-img",
-                        enlargedImageClassName: "large-img widescreen-img",
-                        enlargedImageContainerClassName: "larg-img-cont",
-                        enlargedImagePosition: "over",
-                        lensStyle: { backgroundColor: 'rgba(0,0,0,.6)' }
-                      }}
+                  ) : (
+                    <img
+                      src="/placeholder.jpg"
+                      alt="Placeholder"
+                      className="small-img widescreen-img"
                     />
-                  : ""} 
+                  )}
+
+                  {product.galleryImages.edges.length ? (
+                    <img
+                      src={product.galleryImages.edges[0].node.sourceUrl}
+                      alt="Gallery Image 1"
+                      className="small-img widescreen-img"
+                    />
+                  ) : null}
+
+                  {product.galleryImages.edges.length >= 2 ? (
+                    <img
+                      src={product.galleryImages.edges[1].node.sourceUrl}
+                      alt="Gallery Image 2"
+                      className="small-img widescreen-img"
+                    />
+                  ) : null}
                 </ReactSlick>
+
               </div>
               {/* GAL END */}
             </div>

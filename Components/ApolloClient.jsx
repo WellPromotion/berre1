@@ -75,6 +75,7 @@ const client = new ApolloClient({
 	cache: new InMemoryCache(),
 	fetchOptions: {
 		mode: 'cors',
+		timeout: 10000, // Increase the timeout to 5 seconds
 	},
   
 });
