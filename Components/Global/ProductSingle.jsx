@@ -2,23 +2,42 @@ import Link from 'next/link'
 import AddProductSingle from './AddProductSingle';
 import LazyImage from './LazyLoad';
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 export default function ProductSingle(props) {
 
     // const AddProductSingle = dynamic(import('./AddProductSingle'));
 
   const { product } = props;
-
+  const ImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* adjust ratio if needed */
+`;
 
   return (
       <div className="product__single">
         <Link href={`/proizvodi/${product.productCategories.nodes[0].slug}/${product.slug}`}><a>
             <div className="product__img">
-                <LazyImage
+                {/* <LazyImage
                     key={product.id}
                     src={undefined !== product.productAdditional ? product.productAdditional.additionalProduct.productThumbnail.mediaItemUrl : product.image !== null ? product.image.sourceUrl : '/placeholder.jpg'}
                     alt={product.name}
-                />
+                /> */}
+                  <ImageWrapper>
+                  <Image
+                        key={product.id}
+                        src={
+                            product.productAdditional?.additionalProduct?.productThumbnail?.mediaItemUrl
+                            ?? product.image?.sourceUrl
+                            ?? "/placeholder.jpg"
+                        }
+                        alt={product.name}
+                        fill
+                        style={{ objectFit: "cover" }}
+                        loading="lazy"
+                      />
+                      </ImageWrapper>
                 {(() => {
                         if (product.onSale === true){
                             return(<div className="img__sale"><h6>AKCIJA</h6></div>)
